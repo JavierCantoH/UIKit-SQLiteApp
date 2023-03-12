@@ -1,0 +1,20 @@
+PODS:
+  - Cosmos (23.0.0)
+  - TinyConstraints (4.0.1)
+
+DEPENDENCIES:
+  - Cosmos
+  - TinyConstraints
+
+SPEC REPOS:
+  trunk:
+    - Cosmos
+    - TinyConstraints
+
+SPEC CHECKSUMS:
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
+  TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
+
+PODFILE CHECKSUM: 31d1fd4f3700e7d6544c61864e0fc8ddfb2fa505
+
+COCOAPODS: 1.10.1
