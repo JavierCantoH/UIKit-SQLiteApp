@@ -22,50 +22,6 @@ To get started with the UIKit-SQLiteApp, simply clone this repository and open t
 
 To use the UIKit-SQLiteApp in your own iOS app, simply copy the necessary files and APIs to your project and modify the code to fit your needs. The project is designed to be modular and customizable, so you can easily add or remove features as needed. 📝🎨
 
-```swift
-import UIKit
+## Credits 🙌
 
-class ViewController: UIViewController {
-
-  @IBOutlet weak var tableView: UITableView!
-
-  var data = [Record]()
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Set up the table view
-    tableView.delegate = self
-    tableView.dataSource = self
-    // Load the data
-    loadData()
-  }
-
-  func loadData() {
-    // Load the data from the database
-    let database = DatabaseManager.shared
-    data = database.getAllRecords()
-    tableView.reloadData()
-  }
-
-}
-
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
-
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // Return the number of rows
-    return data.count
-  }
-
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    // Configure the cell
-    let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath) as! RecordCell
-    cell.configure(with: data[indexPath.row])
-    return cell
-  }
-
-}
-```
-
-Credits 🙌
-
-The UIKit-SQLiteApp was created by Javier Canto as a simple iOS app that demonstrates how to use SQLite with UIKit in Swift. The project is designed to be modular and customizable, so you can easily modify the code to fit your needs. 📱💻🙌
+The UIKit-SQLiteApp was created by [Javier Canto](https://github.com/JavierCantoH) as a simple iOS app that demonstrates how to use SQLite with UIKit in Swift. The project is designed to be modular and customizable, so you can easily modify the code to fit your needs. 📱💻🙌
